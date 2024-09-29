@@ -1,0 +1,11 @@
+# # Create a redis user and use gosu to change another user to execute the command
+# RUN groupadd -r redis && useradd -r -g redis redis
+# # download gosu
+# RUN wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/1.7/gosu-amd64" \
+#     && chmod +x /usr/local/bin/gosu \
+#     && gosu nobody true
+# # Set CMD and execute it as another user
+# CMD [ "exec", "gosu", "redis", "redis-server" ]
+
+
+# Je n'ai pas compris le principe
